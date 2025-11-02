@@ -17,6 +17,8 @@ A comprehensive walkthrough on how to automatically package and publish your add
 
 > **📁 Looking for ready-to-use workflow examples?** Check out the [examples directory](examples/) for complete workflow templates!
 
+> **🤔 Not sure which workflow to choose?** Read the [Choosing a Workflow Guide](docs/CHOOSING_A_WORKFLOW.md)!
+
 ## Overview
 
 This guide will show you how to set up automatic publishing of your addon to CurseForge whenever you create a new release on GitHub. This eliminates manual uploading and ensures your addon is always up-to-date on CurseForge.

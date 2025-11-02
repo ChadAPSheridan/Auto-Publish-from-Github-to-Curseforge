@@ -2,6 +2,8 @@
 
 This directory contains example GitHub Actions workflow files for automatically publishing to CurseForge.
 
+> **🤔 Not sure which workflow to use?** Check out the [Choosing a Workflow Guide](../docs/CHOOSING_A_WORKFLOW.md) to find the best option for your project!
+
 ## Available Examples
 
 ### 1. `release-basic.yml`
