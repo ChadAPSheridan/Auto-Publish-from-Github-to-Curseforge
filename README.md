@@ -2,6 +2,8 @@
 
 A comprehensive walkthrough on how to automatically package and publish your addons to CurseForge using GitHub Actions.
 
+> **🚀 Want to get started quickly?** Check out the [Quick Start Guide](QUICKSTART.md) for a condensed 5-step process!
+
 ## Table of Contents
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)
@@ -12,6 +14,8 @@ A comprehensive walkthrough on how to automatically package and publish your add
 - [Step 5: Trigger a Release](#step-5-trigger-a-release)
 - [Troubleshooting](#troubleshooting)
 - [Additional Resources](#additional-resources)
+
+> **📁 Looking for ready-to-use workflow examples?** Check out the [examples directory](examples/) for complete workflow templates!
 
 ## Overview
 
