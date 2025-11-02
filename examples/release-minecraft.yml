@@ -1,0 +1,33 @@
+name: Release Minecraft Mod to CurseForge
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Upload to CurseForge
+        uses: itsmeow/curseforge-upload@v3
+        with:
+          token: ${{ secrets.CURSEFORGE_TOKEN }}
+          project_id: YOUR_PROJECT_ID_HERE
+          game_endpoint: minecraft
+          file_path: build/libs/yourmod-${{ github.event.release.tag_name }}.jar
+          changelog: ${{ github.event.release.body }}
+          changelog_type: markdown
+          game_versions: 1.20.1,1.20.2  # Update with your supported Minecraft versions
+          release_type: release

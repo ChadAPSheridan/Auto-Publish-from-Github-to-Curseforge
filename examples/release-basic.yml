@@ -1,0 +1,34 @@
+name: Release to CurseForge
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Package addon
+        run: |
+          # Create a directory for the packaged addon
+          mkdir -p release
+          # Copy addon files (adjust this based on your addon structure)
+          # Example for WoW addon:
+          cp -r . release/YourAddonName
+          cd release
+          zip -r ../YourAddonName-${{ github.event.release.tag_name }}.zip YourAddonName -x "*.git*" "*.github*" "release/*"
+        
+      - name: Upload to CurseForge
+        uses: itsmeow/curseforge-upload@v3
+        with:
+          token: ${{ secrets.CURSEFORGE_TOKEN }}
+          project_id: YOUR_PROJECT_ID_HERE
+          game_endpoint: wow  # Change to 'minecraft' for Minecraft mods
+          file_path: YourAddonName-${{ github.event.release.tag_name }}.zip
+          changelog: ${{ github.event.release.body }}
+          changelog_type: markdown
+          game_versions: 1.14.3,1.14.4  # Update with your supported versions
+          release_type: release  # Can be 'release', 'beta', or 'alpha'
