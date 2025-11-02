@@ -1,0 +1,21 @@
+name: Release to CurseForge (WoW Addon - BigWigsMods Packager)
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for proper packaging
+
+      - name: Package and release
+        uses: BigWigsMods/packager@v2
+        env:
+          CF_API_KEY: ${{ secrets.CURSEFORGE_TOKEN }}
+        with:
+          args: -p YOUR_PROJECT_ID
