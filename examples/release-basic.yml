@@ -30,5 +30,5 @@ jobs:
           file_path: YourAddonName-${{ github.event.release.tag_name }}.zip
           changelog: ${{ github.event.release.body }}
           changelog_type: markdown
-          game_versions: 1.14.3,1.14.4  # Update with your supported versions
+          game_versions: 11.0.2,11.0.5  # Update with your supported versions - check CurseForge for current game versions
           release_type: release  # Can be 'release', 'beta', or 'alpha'

@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
@@ -29,5 +29,5 @@ jobs:
           file_path: build/libs/yourmod-${{ github.event.release.tag_name }}.jar
           changelog: ${{ github.event.release.body }}
           changelog_type: markdown
-          game_versions: 1.20.1,1.20.2  # Update with your supported Minecraft versions
+          game_versions: 1.20.4,1.21.1  # Update with your supported Minecraft versions - check CurseForge for latest
           release_type: release

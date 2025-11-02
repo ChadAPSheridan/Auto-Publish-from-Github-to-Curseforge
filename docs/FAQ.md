@@ -75,7 +75,7 @@ You can also automatically determine this based on your tag name (e.g., tags con
 ### Q: Can I publish the same version to multiple game versions?
 **A:** Yes, specify multiple game versions in the workflow:
 ```yaml
-game_versions: 1.20.1,1.20.2,1.19.4
+game_versions: 1.20.4,1.21.1  # Update with your supported Minecraft versions - check CurseForge for latest
 ```
 
 ### Q: What happens if I create a release with an existing version number?
