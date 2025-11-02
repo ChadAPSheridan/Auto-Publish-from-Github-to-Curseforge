@@ -26,6 +26,8 @@ This guide will show you how to set up automatic publishing of your addon to Cur
 - Automatic upload to CurseForge with release notes
 - Version synchronization between GitHub and CurseForge
 
+> **📊 Want to visualize the process?** Check out the [Workflow Diagram](docs/WORKFLOW_DIAGRAM.md) to see how all the components interact!
+
 ## Prerequisites
 
 Before you begin, make sure you have:
@@ -271,6 +273,7 @@ git push origin v1.0.0
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [CurseForge API Documentation](https://support.curseforge.com/en/support/solutions/articles/9000197321-curseforge-api)
 - [GitHub Encrypted Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+- [FAQ - Frequently Asked Questions](docs/FAQ.md) ⭐
 
 ### Tools and Actions
 - [CurseForge Upload Action](https://github.com/itsmeow/curseforge-upload)
